@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Agora Homework 2</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="container">
+    <div id="firstRow">
+        <input type="first" id="firstNum" placeholder="First number" />
+        <input type="second" id="secondNum" placeholder="Second number" />
+    </div>
+    <div id="secondRow">
+        <form action "./index.html" onclick="return add()">
+            <button type="button" class="button" onclick="add()"> Add</button>
+        </form>
+        <form action "./index.html" onclick="return subtract()()"></form>
+        <button class="button" type="button" onclick="subtract()"> Subtract</button>
+        </form>
+        <form action "./index.html" onclick="return multiply()"></form>
+        <button class="button" type="button" onclick="multiply()"> Multiply</button>
+        </form>
+        <form action "./index.html" onclick="return divide()"></form>
+        <button class="button" type="button" onclick="divide()"> Divide</button>
+        </form>
+    </div>
+    <div id="thirdRow">
+        <input type="answer" id="result" placeholder="Answer"/>
+    </div>
+    <script>
+        let x;
+        let y;
+        let answer;
+        function add() {
+
+            x = document.getElementById("firstNum").value;
+            y = document.getElementById("secondNum").value;
+            answer = +x + +y;
+
+            if (!isNaN(x)) {
+                x.className = "";
+                if (!isNaN(y)) {
+                    y.className = "";
+                    document.getElementById("result").value = answer;
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        }
+
+        function subtract(x, y) {
+            x = document.getElementById("firstNum").value;
+            y = document.getElementById("secondNum").value;
+            answer = +x - +y;
+
+            if (!isNaN(x)) {
+                x.className = "";
+                if (!isNaN(y)) {
+                    y.className = "";
+                    document.getElementById("result").value = answer;
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        }
+
+        function multiply(x, y) {
+            x = document.getElementById("firstNum").value;
+            y = document.getElementById("secondNum").value;
+            answer = +x * +y;
+
+            if (!isNaN(x)) {
+                x.className = "";
+                if (!isNaN(y)) {
+                    y.className = "";
+                    document.getElementById("result").value = answer;
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        }
+
+        function divide(x, y) {
+            x = document.getElementById("firstNum").value;
+            y = document.getElementById("secondNum").value;
+            answer = +x / +y;
+
+            if (!isNaN(x)) {
+                x.className = "";
+                if (!isNaN(y)) {
+                    y.className = "";
+                    document.getElementById("result").value = answer;
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
